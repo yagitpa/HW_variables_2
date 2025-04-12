@@ -141,9 +141,46 @@ public class Main {
         byte daysAvg = (byte) ((daysMin + daysMax) / 2); // вычисляем среднее количество дней для похудения
         System.out.println("В среднем понадобится " + daysAvg + " дней, чтобы сбросить " + weightToLose + " кг");
 
+        // Задача 8
+            // Представим, что мы работаем в большой компании, штат которой состоит из нескольких сотен сотрудников.
+            // В компании есть правило: чем дольше сотрудник работает в компании, тем ценнее он для бизнеса.
+            // Поэтому сотрудники, которые работают в компании дольше 3 лет, получают повышение зарплаты раз в год.
+            // Каждый год повышение составляет 10% от текущей зарплаты.
+            // К вам пришел руководитель с задачей автоматизировать повышение зарплаты,
+            // а также провести расчет для следующих сотрудников:
+            // Маша получает 67 760 рублей в месяц.
+            // Денис получает 83 690 рублей в месяц.
+            // Кристина получает 76 230 рублей в месяц.
+            // Каждому нужно увеличить зарплату на 10% от текущей месячной.
+            // Дополнительно руководитель попросил посчитать разницу между годовым доходом с нынешней зарплатой
+            // и после повышения.
+            // Посчитайте, сколько будет получать каждый из сотрудников,
+            // а также разницу между годовым доходом до и после повышения.
+            // Выведите в консоль информацию по каждому сотруднику.
+            // Например: «Маша теперь получает ... рублей. Годовой доход вырос на ... рублей».
 
-
-
+            int zpMasha = 67760;
+            int zpDenis = 83690;
+            int zpKristina = 76230;
+            byte zpPercentIncrease = 10;
+            int zpMashaIncrease = zpMasha * zpPercentIncrease / 100;
+            int zpDenisIncrease = zpDenis * zpPercentIncrease / 100;
+            int zpKristinaIncrease = zpKristina * zpPercentIncrease / 100;
+            int newZpMasha = zpMasha + zpMashaIncrease;
+            int newZpDenis = zpDenis + zpDenisIncrease;
+            int newZpKristina = zpKristina + zpKristinaIncrease;
+            int zpMashaYearBefore = zpMasha * 12;
+            int zpMashaYearAfter = newZpMasha * 12;
+            int zpDenisYearBefore = zpDenis * 12;
+            int zpDenisYearAfter = newZpDenis * 12;
+            int zpKristinaYearBefore = zpKristina * 12;
+            int zpKristinaYearAfter = newZpKristina * 12;
+            int zpMashaYearDiff = zpMashaYearAfter - zpMashaYearBefore;
+            int zpDenisYearDiff = zpDenisYearAfter - zpDenisYearBefore;
+            int zpKristinaYearDiff = zpKristinaYearAfter - zpKristinaYearBefore;
+            System.out.println("Маша раньше получала " + zpMasha + " рублей, а теперь получает " + newZpMasha + " рублей. Ее годовой доход вырос на " + zpMashaYearDiff + " рублей!");
+            System.out.println("Денис раньше получал " + zpDenis + " рублей, а теперь получает " + newZpDenis + " рублей. Его годовой доход вырос на " + zpDenisYearDiff + " рублей!");
+            System.out.println("Кристина раньше получала " + zpKristina + " рублей, а теперь получает " + newZpKristina + " рублей. Ее годовой доход вырос на " + zpKristinaYearDiff + " рублей!");
 
     }
 }
