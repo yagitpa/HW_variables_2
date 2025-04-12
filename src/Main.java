@@ -8,16 +8,16 @@ public class Main {
         // Выведите в консоль значение каждой переменной в формате «Значение переменной … с типом … равно …»
 
     int num1 = 100;
-    byte num2 = 1;
-    short num3 = 5;
-    long num4 = 1000L;
-    float num5 = 5.25f;
-    double num6 = 1.314;
     System.out.println("Значение переменной num1 с типом int равно " + num1);
+    byte num2 = 1;
     System.out.println("Значение переменной num2 с типом byte равно " + num2);
+    short num3 = 5;
     System.out.println("Значение переменной num3 с типом short равно " + num3);
+    long num4 = 1000L;
     System.out.println("Значение переменной num4 с типом long равно " + num4);
+    float num5 = 5.25f;
     System.out.println("Значение переменной num5 с типом float равно " + num5);
+    double num6 = 1.314;
     System.out.println("Значение переменной num6 с типом double равно " + num6);
 
     // Задача 2
@@ -47,13 +47,39 @@ public class Main {
         // Результат задачи выведите в консоль в формате: «На каждого ученика рассчитано … листов бумаги».
         // Для объявления переменных не используйте тип var
 
-    byte classLP = 23;
-    byte classAS = 27;
-    byte classEA = 30;
-    short paper = 480;
-    byte totalStudents = (byte) (classLP + classAS + classEA);
-    byte paperPerStudent = (byte) (paper / totalStudents);
+    byte classLP = 23; // класс 1
+    byte classAS = 27; // класс 2
+    byte classEA = 30; // класс 3
+    short paper = 480; // бумаги закуплено
+    byte totalStudents = (byte) (classLP + classAS + classEA); // считаем сколько всего учеников
+    byte paperPerStudent = (byte) (paper / totalStudents); // считаем сколько бумаги на ученика
     System.out.println("На каждого ученика рассчитано " + paperPerStudent + " листов бумаги");
+
+    // Задача 4
+        // Производительность машины для изготовления бутылок — 16 бутылок за 2 минуты.
+        // Какая производительность машины будет:
+        // за 20 минут,
+        // в сутки,
+        // за 3 дня,
+        // за 1 месяц?
+        // Рассчитывайте производительность работы машины в том случае, если она работает без перерыва
+        // заданный промежуток времени.
+        // Результаты подсчетов выведите в консоль в формате: «За … машина произвела … штук бутылок».
+        // Для объявления переменных не используйте тип var.
+
+        byte bottlesPer2Minutes = 16;
+        short bottlesPer20Minutes = (short) (bottlesPer2Minutes * (20 / 2)); // считаем производительность за 20 минут
+        System.out.println("За 20 минут машина произвела " + bottlesPer20Minutes + " бутылок");
+        short minutesInDay = 24 * 60;
+        short bottlesPerDay = (short) (bottlesPer2Minutes * (minutesInDay / 2)); // считаем производительность в сутки
+        System.out.println("За сутки машина произвела " + bottlesPerDay + " бутылок");
+        int bottlePer3Days = bottlesPerDay * 3; // считаем производительность за 3 дня
+        System.out.println("За 3 дня машина произвела " + bottlePer3Days + " бутылок");
+        int bottlesPerMonth = bottlesPerDay * 30; // считаем производительность за месяц, равный 30 дням
+        System.out.println("За месяц машина произвела " + bottlesPerMonth + " бутылок");
+
+
+
 
     }
 }
