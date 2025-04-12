@@ -113,7 +113,7 @@ public class Main {
         // Результат в граммах и килограммах напечатайте в консоль.
 
         short bananWeight = 5 * 80;
-        short milkWeight = 200 * 105;
+        short milkWeight = 2 * 105;
         short icecreamWeight = 2 * 100;
         short eggWeight = 4 * 70;
         short weightInGramms = (short) (bananWeight + milkWeight + icecreamWeight + eggWeight); // считаем общий вес завтрака в граммах
