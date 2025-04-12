@@ -85,6 +85,63 @@ public class Main {
         int bottlesPerMonth = bottlesPerDay * 30; // считаем производительность за месяц, равный 30 дням
         System.out.println("За месяц машина произвела " + bottlesPerMonth + " бутылок");
 
+    // Задача 5
+        // На ремонт школы нужно 120 банок краски двух цветов: белой и коричневой.
+        // На один класс уходит 2 банки белой и 4 банки коричневой краски. Сколько банок каждой краски было куплено?
+        // Выведите результат задачи в консоль в формате: «В школе, где … классов, нужно … банок белой краски
+        // и … банок коричневой краски».
+        // Для объявления переменных не используйте тип var.
+
+        byte totalPots = 120;
+        byte whiteColorPotPerClass = 2;
+        byte brownColorPotPerClass = 4;
+        byte totalPotsPerClass = (byte) (whiteColorPotPerClass + brownColorPotPerClass); // считаем сколько всего банок краски на класс
+        short totalClasses = (short) (totalPots / totalPotsPerClass); // считаем на сколько классов будет потрачена краска
+        byte totalWhiteColorPots = (byte) (whiteColorPotPerClass * totalClasses); // считаем количество банок белой краски
+        byte totalBrownColorPots = (byte) (brownColorPotPerClass * totalClasses); // считаем количество банок коричневой краски
+        System.out.println("В школе, где " + totalClasses + " классов, нужно " + totalWhiteColorPots + " банок белой краски и " + totalBrownColorPots + " банок коричневой краски");
+
+    // Задача 6
+        // Спортсмены следят за своим весом и тщательно относятся к тому, что и сколько они съедают.
+        // Вот один из рецептов, по которому спортсмен готовит себе завтрак:
+        // Бананы — 5 штук (1 банан — 80 грамм).
+        // Молоко — 200 мл (100 мл = 105 грамм).
+        // Мороженое-пломбир — 2 брикета по 100 грамм.
+        // Яйца сырые – 4 яйца (1 яйцо — 70 грамм).
+        // Смешать всё в блендере — и готово.
+        // Подсчитайте вес (количество граммов) такого спортзавтрака, а затем переведите его в килограммы.
+        // Результат в граммах и килограммах напечатайте в консоль.
+
+        short bananWeight = 5 * 80;
+        short milkWeight = 200 * 105;
+        short icecreamWeight = 2 * 100;
+        short eggWeight = 4 * 70;
+        short weightInGramms = (short) (bananWeight + milkWeight + icecreamWeight + eggWeight); // считаем общий вес завтрака в граммах
+        float weightInKilogramms = (float) (weightInGramms / 1000.0); // переводим вес в килограммы
+        System.out.println("Вес завтрака спортсмена " + weightInGramms + " грамм");
+        System.out.println("Вес завтрака спортсмена " + weightInKilogramms + " килограмм");
+
+        // Задача 7
+            // Правила соревнований обновились, и спортсмену, чтобы оставаться в своей весовой категории, нужно сбросить 7 кг.
+            // Тренер скорректировал рацион так, чтобы спортсмен мог терять в весе от 250 до 500 грамм в день.
+            // Посчитайте, сколько дней уйдет на похудение, если спортсмен будет терять каждый день по 250 грамм,
+            // а сколько — если каждый день будет худеть на 500 грамм.
+            // Посчитайте, сколько может потребоваться дней в среднем, чтобы добиться результата похудения.
+            // Результаты всех подсчетов выведите в консоль.
+
+        byte weightToLose = 7; // сколько нужно сбросить кг
+        short weightToLosePerDayInGrammMin = 250; // минимальный план 250 грамм в день
+        short weightToLosePerDayInGrammMax = 500; // максимальный план 500 грамм в день
+        float weightToLosePerDayInKgMin = (float) weightToLosePerDayInGrammMin / 1000; // переводим в килограммы
+        float weightToLosePerDayInKgMax = (float) weightToLosePerDayInGrammMax / 1000; // переводим в килограммы
+        byte daysMin = (byte) (weightToLose / weightToLosePerDayInKgMin); // вычисляем количество дней для похудения при минимальной потере веса
+        System.out.println("При ежедневной минимальной потере веса в " + weightToLosePerDayInGrammMin + " грамм, для потери " + weightToLose + " кг веса, потребуется " + daysMin + " дней");
+        byte daysMax = (byte) (weightToLose / weightToLosePerDayInKgMax); // вычисляем количество дней для похудения при максимальной потере веса
+        System.out.println("При ежедневной максимальной потере веса в " + weightToLosePerDayInGrammMax + " грамм, для потери " + weightToLose + " кг веса , потребуется " + daysMax + " дней");
+        byte daysAvg = (byte) ((daysMin + daysMax) / 2); // вычисляем среднее количество дней для похудения
+        System.out.println("В среднем понадобится " + daysAvg + " дней, чтобы сбросить " + weightToLose + " кг");
+
+
 
 
 
